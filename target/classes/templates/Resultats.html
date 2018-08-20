@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Espace enfant </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html" class="logo">KidSchool</a>
+				<nav class="right">
+					<a href="#" class="button alt">Log in</a>
+				</nav>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				
+				<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul>
+			</nav>
+ <h1 id="ha"></h1>
+ <script>
+ // document.getElementById("ha").innerHTML = localStorage.getItem("storageName") ;
+ </script>
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h1>Resultats de votre enfant</h1>
+					</header>
+
+					<br> <br>
+
+									<h4>Resultats</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Date</th>
+												    <th>Score</th>												
+													<th>Matiére</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr th:each="item:${Resultats}" >
+													<td th:text="${item.date}"></td>
+													<td th:text="${item.score}"></td>
+										        	<td th:text="Math"></td>
+													
+													
+												</tr>
+											
+										</table>
+									</div>
+
+					
+			</section>
+
+<script type="text/javascript">
+	window.addEventListener("load", getIDMatiere, false);
+
+
+	function getIDMatiere(){
+		  var url = window.location.href;
+  		  var qparts = url.split("?");
+  		  // works
+  		  //document.write(qparts[1]) ;
+	}
+</script>
+
+
+		
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

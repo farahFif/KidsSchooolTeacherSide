@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Espace enfant </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" th:href="@{/assets/css/main.css}" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html" class="logo">KidSchool</a>
+			
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul>
+			</nav>
+			<br><br><br>
+<h1 style="margin-left:37%;color:#727a82;">Information du compte </h1>
+
+<br> <br>
+			<img th:src="@{/assets/images/etat.jpg}" style="margin-left:41%;" />
+
+		<!-- Main -->
+			<section id="main" class="wrapper" style="margin-left:10%;">
+			
+			<h2 style="margin-left:5%;">Informations générales</h2>
+			
+				<div class="table-wrapper">
+										<table class="alt" style="width:80%; margin-left:05%;">
+										
+											<tbody>
+												<tr>
+													<td>Nom</td>
+													<td th:text="${parent.Nom}"></td>
+												</tr>
+												<tr>
+													<td>Prenom</td>
+													<td th:text="${parent.Prenom}"></td>
+												</tr>
+												<tr>
+													<td>Nombre d'enfants</td>
+													<td th:text="${nb}"></td>
+												</tr>
+												<tr>
+													<td>Etat abonnement</td>
+													<td>Paye</td>
+												</tr>
+												<tr>
+													<td>Expiration abonnement</td>
+													<td>5 mois</td>
+												</tr>
+											</tbody>
+											
+										</table>
+									</div>
+					
+<br> <br>
+<h2 style="margin-left:5%;">Contacter administrateur</h2>
+ 					<div class="12u$">
+						<textarea name="message" id="message" placeholder="Reporter un probléme" rows="6" style="width:70%;margin-left:5%;"></textarea>
+					</div>
+
+<br>
+					<div class="12u$">
+							<ul class="actions" style="margin-left:5%;">
+								<li><input type="submit" value="Envoyer" /></li>
+							</ul>
+					</div>
+					
+								</section>
+					
+
+<script type="text/javascript">
+	window.addEventListener("load", getIDMatiere, false);
+
+
+	function getIDMatiere(){
+		  var url = window.location.href;
+  		  var qparts = url.split("?");
+  		  // works
+  		  //document.write(qparts[1]) ;
+	}
+</script>
+
+
+		
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Matieres </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" th:href="@{/assets/css/main.css}" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html" class="logo">KidSchool</a>
+				
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Resultats.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h1>Voir tous les resultats de votre enfant par matiéres</h1>
+					</header>
+
+					<br> <br>
+
+ <script type="text/javascript"> var i = 0;</script>
+ 
+ 
+	<div style="margin-left: 50px;" th:each="item:${MatiereSpecif}"> 
+	<script >
+	
+	  var j = "[[${item.titre}]]";
+
+	</script>
+		<div class="orama"><span class="lienOrama" th:text="${item.titre}" onClick ="GoTo();"></span></div>
+	
+		<script type="text/javascript">
+		 i++;
+		</script>	
+	</div>  
+	
+				</section>
+				
+				<h1 id="lol"></h1>
+			
+			<script>
+			 function GoTo(){
+				// document.getElementById('lol').innerHTML = num;
+				// localStorage.setItem("storageName",num);
+				window.location.href = "/Resultats";
+
+			 }
+			 
+			</script>
+
+<br><br> <br>
+
+<!-- <div class="orama" style="background-color:#F04C00;"><a href="Resultats.html?Math" class="lienOrama"> Math</a></div>
+
+		<div class="orama"><a href="Resultats.html?Français" class="lienOrama"> Français</a></div>
+		<div class="orama" style="background-color:#F04C00 ; padding-left: 8%;"><a href="Resultats.html?Histoire" class="lienOrama"> Histoire</a></div>
+		<div class="orama" style="padding-left: 7%;"><a href="Resultats.html?Géographie" class="lienOrama"> Géographie</a></div>
+		<div class="orama" style="background-color:#F04C00; padding-left: 09%;"><a href="Resultats.html?Science" class="lienOrama"> Science</a></a></div> -->
+		
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+
+	</body>
+</html>
